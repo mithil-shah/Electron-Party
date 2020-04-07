@@ -1,0 +1,14 @@
+{
+  "name": "electron-party",
+  "version": "1.0.0",
+  "description": "Netflix Party for more streaming services",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Mithil Shah & Trey Green",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^8.2.1"
+  }
+}

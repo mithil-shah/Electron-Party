@@ -1,14 +1,30 @@
-body {
+body, html {
   width: 100%;
   height: 100%;
+  margin: 0;
+  padding: 0;
   background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB) fixed;
   background-size: 400% 400%;
-  animation: change 10s ease-in-out infinite;
+  animation: change-gradient 10s ease-in-out infinite;
   overflow: hidden;
 }
 
+.app-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.title-bar {
+  width: 100%;
+  height: 32px;
+  background-color: transparent;
+  -webkit-app-region: drag;
+}
+
 h1 {
-  padding-top: 10%;
+  padding-top: 5%;
   color: white;
   font-family: 'Lato', sans-serif;
   font-weight: 900;
@@ -26,7 +42,7 @@ h2 {
   user-select: none;
 }
 
-@keyframes change {
+@keyframes change-gradient {
   0% {
     background-position: 0 50%;
   }

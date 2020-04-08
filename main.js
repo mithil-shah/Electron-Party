@@ -13,7 +13,7 @@ function createWindow () {
   })
 
   // and load the index.html of the app.
-  mainWindow.loadURL(`file://${path.join(__dirname, '/SignUpLoginPage/index.html')}`);
+  mainWindow.loadURL(`file://${path.join(__dirname, '/SignUpLoginPage/index.html')}`).then();
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()

@@ -1,6 +1,9 @@
 {
   "name": "electron-party",
+<<<<<<< HEAD
   "productName": "Electron Party",
+=======
+>>>>>>> 16184d19a9b488ea832a5216bda5414f50cc3d49
   "version": "1.0.0",
   "description": "Netflix Party for more streaming services",
   "main": "main.js",

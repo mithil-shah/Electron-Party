@@ -7,10 +7,20 @@ function createWindow () {
   const mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
+<<<<<<< HEAD
   })
 
   // and load the index.html of the app.
   mainWindow.loadURL(`file://${path.join(__dirname, '/SignUpLoginPage/index.html')}`);
+=======
+    webPreferences: {
+      preload: path.join(__dirname, 'main.js')
+    }
+  })
+
+  // and load the index.html of the app.
+  mainWindow.loadFile('index.html')
+>>>>>>> 16184d19a9b488ea832a5216bda5414f50cc3d49
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()

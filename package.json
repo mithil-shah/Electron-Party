@@ -1,5 +1,6 @@
 {
   "name": "electron-party",
+  "productName": "Electron Party",
   "version": "1.0.0",
   "description": "Netflix Party for more streaming services",
   "main": "main.js",

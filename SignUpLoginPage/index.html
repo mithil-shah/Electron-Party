@@ -2,7 +2,8 @@
 <html lang="en">
 <link>
     <meta charset="utf-8">
-    <script rel="script" src="main.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:400,800">
     <title>Electron Party</title>
@@ -19,10 +20,10 @@
                     <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                 </div>
                 <span>or use your email for registration</span>
-                <input type="text" placeholder="Name" />
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
-                <button>Sign Up</button>
+                <input id="name" type="text" placeholder="Name" />
+                <input id="email" type="email" placeholder="Email" />
+                <input id="pass"  type="password" placeholder="Password" />
+                <button onclick="registerUserFirebase()" id="register_user_btn">Sign Up</button>
             </form>
         </div>
         <div class="form-container sign-in-container">
@@ -43,6 +44,7 @@
         <div class="overlay-container">
             <div class="overlay">
                 <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
                     <p>To keep connected with us please login with your personal info</p>
                     <button class="ghost" id="signIn">Sign In</button>
                 </div>
@@ -54,5 +56,44 @@
             </div>
         </div>
     </div>
+    <script>
+        const signUpButton = document.getElementById('signUp');
+        const signInButton = document.getElementById('signIn');
+        const container = document.getElementById('container');
+
+        signUpButton.addEventListener('click', () => {
+            container.classList.add("right-panel-active");
+        });
+
+        signInButton.addEventListener('click', () => {
+            container.classList.remove("right-panel-active");
+        });
+
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDhH7osDWGoXWANFmLer4THD-Zk_C60ZoM",
+            authDomain: "electron-party.firebaseapp.com",
+            databaseURL: "https://electron-party.firebaseio.com",
+            projectId: "electron-party",
+            storageBucket: "electron-party.appspot.com",
+            messagingSenderId: "791987825343",
+            appId: "1:791987825343:web:f99b7dbebfbfcf2a4b740a",
+            measurementId: "G-TVCYY2R47J"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        const auth = firebase.auth();
+
+        function registerUserFirebase() {
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('pass').value;
+
+            const promise = auth.createUserWithEmailAndPassword(email, password);
+            promise.catch(error => alert(error.message));
+
+            alert('Signed Up');
+        }
+    </script>
 </body>
 </html>

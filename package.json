@@ -1,9 +1,9 @@
 {
-  "name": "electron-party",
-  "productName": "Electron Party",
+  "name": "cuddle-fish",
+  "productName": "Cuddlefish",
   "version": "1.0.0",
   "description": "Netflix Party for more streaming services",
-  "main": "main.js",
+  "main": "renderer.js",
   "scripts": {
     "start": "electron ."
   },

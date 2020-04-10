@@ -7,11 +7,11 @@ function createWindow () {
   const mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
-    titleBarStyle: "hidden",
+    titleBarStyle: 'hidden',
     background: '#23A6D5', //Color shown when application starts, instead of white screen
     show: false,
     webPreferences: {
-      preload: path.join(__dirname, 'main.js')
+      preload: path.join(__dirname, 'renderer.js')
     }
   })
 

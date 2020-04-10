@@ -1,4 +1,4 @@
-# Electron Party
+# Cuddlefish
 
 ## Table of Contents
 [Details](#Details)  
@@ -6,7 +6,7 @@
 [Development Setup](#Setup)  
 
 ## Details
-Electron Party allows you to watch TV and Movies with your friends.
+Cuddlefish allows you to watch TV and Movies with your friends.
 
 ## Technology
 Made with:
